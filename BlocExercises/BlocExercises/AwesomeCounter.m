@@ -18,8 +18,11 @@
         [numberString appendString:[NSString stringWithFormat:@"%ld",n]];
     }
     
-    
     for(NSInteger n = number; n<=otherNumber; n++ ) {
+        [numberString appendString:[NSString stringWithFormat:@"%ld",n]];
+    }
+    
+    for ( NSInteger n = number; n==otherNumber; n++) {
         [numberString appendString:[NSString stringWithFormat:@"%ld",n]];
     }
     return numberString;
