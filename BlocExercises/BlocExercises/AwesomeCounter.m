@@ -23,7 +23,7 @@
     }
     
     for ( NSInteger n = number; n==otherNumber; n++) {
-        [numberString appendString:[NSString stringWithFormat:@"%ld",n]];
+        [numberString setString:[NSString stringWithFormat:@"%ld",n]];
     }
     return numberString;
 
