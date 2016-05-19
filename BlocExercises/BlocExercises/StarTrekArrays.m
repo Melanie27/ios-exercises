@@ -6,32 +6,32 @@
 //
 //
 
+#import "StarTrekArrays.h"
 @implementation StarTrekArrays
 
 - (NSArray *) arrayOfStarTrekCharactersFromString:(NSString *)characterString {
     /* WORK HERE */
-    NSString *trekString = @"Worf, son of Mogh, slayer of Gowron Captain Jean-Luc Picard of the USS Enterprise Beverly Crusher, Chief Medical Officer";
-    NSArray  *trekArray = [trekString componentsSeparatedByString:@"; "];
-    [trekArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSLog(@"Task #%ld: %@", idx +1, obj);
-    }];
+    NSArray  *trekArray = [characterString componentsSeparatedByString:@";"];
     return trekArray;
 }
 
 - (NSString *) stringOfStarTrekCharactersFromArray:(NSArray *)characterArray {
     /* WORK HERE */
-    NSArray *starTrekArrays
-    NSString *starTrekCharacters = [starTrekArrays componentsJoinedByString:@";"];
-    return starTrekCharacters;
+    NSString *trekString = [characterArray componentsJoinedByString:@";"];
+    return trekString;
 }
+
 
 - (NSArray *) alphabeticallySortedStarTrekCharactersFromArray:(NSArray *)characterArray {
     /* WORK HERE */
-    return @[];
+    NSArray *sortedArray = [characterArray sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    return sortedArray;
 }
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
     /* WORK HERE */
+    NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
+    [characterArray filteredArrayUsingPredicate:containsWorf];
     return NO;
 }
 
