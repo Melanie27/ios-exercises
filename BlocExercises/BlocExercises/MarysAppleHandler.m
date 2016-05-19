@@ -17,9 +17,9 @@
     
     if(dollars <= 4) {
         itemToReturn = @"get out of my store";
-    } else if (dollars == 5){
+    } else if ((dollars >= 5) && (dollars < 6)) {
         itemToReturn = @"have some gum";
-    } else if (dollars == 6) {
+    } else if ((dollars >= 6) && (dollars < 10)) {
         itemToReturn = @"have an apple";
     } else if ((dollars >= 1000) && (dollars < 1000000000)) {
         itemToReturn = @"have an Apple computer";
@@ -34,11 +34,7 @@
 - (NSUInteger) dollarCostForAppleFlavoredVodka {
     /* WORK HERE */
 
-    NSUInteger cost = 24;
-   
-    if (self.getsDiscount) {
-        cost *= .75;
-    }
+    NSUInteger cost = (self.getsDiscount) ? 18:24;
     
     return cost;
 }
