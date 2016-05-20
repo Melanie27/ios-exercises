@@ -25,14 +25,22 @@
 - (NSArray *) alphabeticallySortedStarTrekCharactersFromArray:(NSArray *)characterArray {
     /* WORK HERE */
     NSArray *sortedArray = [characterArray sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+/*
+    sortedArray = [characterArray sortedArrayUsingDescriptors:
+                   @[[[NSSortDescriptor alloc] initWithKey:nil
+                                                 ascending:YES
+                                                  selector:@selector(localizedCaseInsensitiveCompare:)]]];
+*/
     return sortedArray;
 }
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
     /* WORK HERE */
     NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
-    [characterArray filteredArrayUsingPredicate:containsWorf];
-    return NO;
+    NSArray *returnArray = [characterArray filteredArrayUsingPredicate:containsWorf];
+    
+    return (returnArray.count > 0);
+    
 }
 
 @end
