@@ -113,6 +113,9 @@ Functions
 let strings = ["milk", "eggs", "bread", "challah"]
 
 // WORK HERE - make your function and pass `strings` in
+func joinStrings(strings:[String]) {
+   
+}
 
 let expectedOutput = "milk;eggs;bread;challah"
 
@@ -123,6 +126,11 @@ Closures
 */
 
 let cerealArray = ["Golden Grahams", "Cheerios", "Trix", "Cap'n Crunch OOPS! All Berries", "Cookie Crisp"]
+
+let cerealSortedByAlpha = cerealArray.sort{$0 < $1}
+print (cerealSortedByAlpha)
+
+
 
 // Use a closure to sort this array alphabetically
 // WORK HERE
