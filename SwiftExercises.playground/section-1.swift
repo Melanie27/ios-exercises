@@ -30,7 +30,6 @@ var numberArray = [1,2,3,4,5]
 // WORK HERE
 var numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
 /*
-
 Loops
 */
 
@@ -61,10 +60,10 @@ let picard = [
 
 let characters = [worf, picard]
 
+
 func favoriteDrinksArrayForCharacters(characters:[[String : String]]) -> [String] {
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
     // WORK HERE
-    
     return []
 }
 
