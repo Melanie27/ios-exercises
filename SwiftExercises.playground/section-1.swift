@@ -8,7 +8,7 @@ Strings
 
 func favoriteCheeseStringWithCheese(cheese: String) -> String {
     // WORK HERE
-    return cheese
+    return "My favorite cheese is " + cheese
 }
 
 let fullSentence = favoriteCheeseStringWithCheese("cheddar")
@@ -20,14 +20,15 @@ Arrays & Dictionaries
 
 */
 
-let numberArray = [1, 2, 3, 4]
+//let numberArray = [1, 2, 3, 4]
 // Add 5 to this array
 // WORK HERE
+var numberArray = [1,2,3,4,5]
 
-let numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
+//let numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
 // Add 5 : "five" to this dictionary
 // WORK HERE
-
+var numberDictionary = [1 : "one", 2 : "two", 3 : "three", 4 : "four"]
 /*
 
 Loops
@@ -36,9 +37,15 @@ Loops
 
 // Use a closed range loop to print 1 - 10, inclusively
 // WORK HERE
+    for rangeLoop in 1...10 {
+        print(rangeLoop)
+    }
 
 // Use a half-closed range loop to print 1 - 10, inclusively
 // WORK HERE
+    for halfRange in 1..<10 {
+        print(halfRange)
+    }
 
 let worf = [
     "name": "Worf",
@@ -58,6 +65,7 @@ let characters = [worf, picard]
 func favoriteDrinksArrayForCharacters(characters:[[String : String]]) -> [String] {
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
     // WORK HERE
+    
     return []
 }
 
@@ -75,7 +83,12 @@ func emailFromUserDict(userDict : [String : String]) -> String {
     // Return the user's email address from userDict, or return "" if they don't have one
     
     // WORK HERE
-    return "user@example.com"
+    if let unwrappedEmail = userDict["email"] {
+        return unwrappedEmail
+    } else {
+        return ""
+    }
+   
 }
 
 
