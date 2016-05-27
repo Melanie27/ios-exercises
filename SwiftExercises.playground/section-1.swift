@@ -64,7 +64,12 @@ let characters = [worf, picard]
 func favoriteDrinksArrayForCharacters(characters:[[String : String]]) -> [String] {
     // return an array of favorite drinks, like ["prune juice", "tea, Earl Grey, hot"]
     // WORK HERE
-    return []
+    var favoriteDrinks: NSMutableArray = []
+    for name in characters {
+        name["favorite drink"]
+        favoriteDrinks.addObject(name["favorite drink"]!)
+    }
+    return favoriteDrinks as NSArray as! [String]
 }
 
 let favoriteDrinks = favoriteDrinksArrayForCharacters(characters)
@@ -111,9 +116,13 @@ Functions
 let strings = ["milk", "eggs", "bread", "challah"]
 
 // WORK HERE - make your function and pass `strings` in
-func joinStrings(strings:[String]) {
-   
+func joinStrings(strings:[String]) -> String {
+    
+    return (strings as NSArray).componentsJoinedByString(";")
+    
 }
+
+joinStrings(strings)
 
 let expectedOutput = "milk;eggs;bread;challah"
 
